@@ -32,7 +32,7 @@ app.use(
     credentials: true, // Allow cookies/auth headers
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    origin: ["https://farmbros-obhk.onrender.com/"]
+    
   })
 );
 

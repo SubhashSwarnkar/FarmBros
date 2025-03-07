@@ -12,8 +12,8 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "https://farmbros-obhk.onrender.com",
-      description: "Production server",
+      url: "http://localhost:5000",
+      description: "Local server",
     },
   ],
   // Add the bearer authentication configuration
