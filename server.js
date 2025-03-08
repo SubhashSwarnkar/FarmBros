@@ -11,29 +11,17 @@ const storeRoutes = require("./routes/storeRoutes");
 const productRoutes = require("./routes/productRoutes");
 const cartRoutes = require("./routes/cartRoutes"); // Add Cart API
 const { swaggerUi, swaggerSpec } = require("./config/swagger");
-const allowedOrigins = [
-  "http://localhost:5174", // Store Manager App
-  "http://localhost:5173",
- "http://localhost:5000", // Customer App
- "https://farmbros-frondend.vercel.app",
 
-];
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true, // Allow cookies/auth headers
-  
-  })
-);
+app.use(cors({
+  origin: "*",  // 🌎 Allows API access from anywhere
+  methods: ["GET", "POST", "PUT", "DELETE"],  // Allow all HTTP methods
+  allowedHeaders: ["Content-Type", "Authorization"],  // Allow necessary headers
+}));
+
+
 
 mongoose
   .connect(process.env.MONGO_URI, )
