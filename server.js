@@ -15,7 +15,8 @@ const allowedOrigins = [
   "http://localhost:5174", // Store Manager App
   "http://localhost:5173",
  "http://localhost:5000", // Customer App
- 
+ "https://farmbros-frondend.vercel.app",
+ "https://farmbros-obhk.onrender.com/api-docs",
 ];
 const PORT = process.env.PORT || 5000;
 const app = express();
