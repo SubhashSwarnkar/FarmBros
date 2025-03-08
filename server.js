@@ -16,7 +16,7 @@ const allowedOrigins = [
   "http://localhost:5173",
  "http://localhost:5000", // Customer App
  "https://farmbros-frondend.vercel.app",
- "https://farmbros-obhk.onrender.com/api-docs",
+
 ];
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -31,13 +31,12 @@ app.use(
       }
     },
     credentials: true, // Allow cookies/auth headers
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+  
   })
 );
 
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGO_URI, )
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
