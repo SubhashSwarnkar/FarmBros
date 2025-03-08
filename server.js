@@ -15,7 +15,7 @@ const allowedOrigins = [
   "http://localhost:5174", // Store Manager App
   "http://localhost:5173",
  "http://localhost:5000", // Customer App
- 
+ "https://farmbors-obhk.onrender.com",
 ];
 const PORT = process.env.PORT || 5000;
 const app = express();

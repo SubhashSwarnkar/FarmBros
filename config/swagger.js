@@ -12,7 +12,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "http://localhost:5000",
+      url: "https://farmbors-obhk.onrender.com",
       description: "Local server",
     },
   ],
