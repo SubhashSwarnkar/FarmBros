@@ -14,7 +14,9 @@ const swaggerDefinition = {
     {
       url: "http://localhost:5000",
       description: "Local server",
-    },
+    },{ url: "https://your-render-api.onrender.com" ,
+      description: " server",
+    } ,
   ],
   // Add the bearer authentication configuration
   components: {
